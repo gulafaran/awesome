@@ -1,4 +1,4 @@
-CC=gcc
+CC=clang
 LUA_LIB=/usr/share/awesome/lib
 THEME_PATH=/usr/share/awesome/themes
 XDG_CONF=/etc/xdg
@@ -26,8 +26,6 @@ awesome: vars $(OBJ)
 
 install: awesome
 	install -D -m755 bin/awesome $(DESTDIR)/usr/bin/awesome
-	install -d -m755 $(DESTDIR)/usr/share/awesome/icons
-	cp -r icons/* $(DESTDIR)/usr/share/awesome/icons
 	install -d -m755 $(DESTDIR)$(LUA_LIB)
 	cp -r src/lib/* $(DESTDIR)$(LUA_LIB)
 	install -d -m755 $(DESTDIR)/usr/share/awesome/themes
