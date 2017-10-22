@@ -1,0 +1,11 @@
+#ifndef _CONFIG_H_
+#define _CONFIG_H_
+
+#define AWESOME_LUA_LIB_PATH  "AWESOMELUAPATH"
+#define XDG_CONFIG_DIR        "AWESOMEXDGPATH"
+#define AWESOME_IS_BIG_ENDIAN 0
+
+#define WITH_DBUS
+#define HAS_EXECINFO
+
+#endif //_CONFIG_H_
