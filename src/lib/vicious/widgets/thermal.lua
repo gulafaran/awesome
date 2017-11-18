@@ -24,7 +24,8 @@ local function worker(format, warg)
     local zone = { -- Known temperature data sources
         ["sys"]  = {"/sys/class/thermal/",     file = "temp",       div = 1000},
         ["core"] = {"/sys/devices/platform/",  file = "temp2_input",div = 1000},
-        ["proc"] = {"/proc/acpi/thermal_zone/",file = "temperature"}
+        ["proc"] = {"/proc/acpi/thermal_zone/",file = "temperature"},
+        ["hwmon"] = {"/sys/class/hwmon/",      file = "temp1_input",div = 1000}
     } --  Default to /sys/class/thermal
     warg = type(warg) == "table" and warg or { warg, "sys" }
 
